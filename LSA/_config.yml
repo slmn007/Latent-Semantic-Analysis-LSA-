@@ -1,0 +1,17 @@
+title: Latex Simantic Analysis
+author: Sulaiman
+logo: logo.png
+
+execute:
+  execute_notebooks: force
+
+repository:
+  url: https://github.com/slmn007/Latent-Semantic-Analysis-LSA-  # Online location of your book
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+html:
+  use_repository_button: true
+
+launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+  colab_url                 : "https://colab.research.google.com/drive/1nZHYS184CpUpUd1hb0bHVOThM5FJKAXn?usp=sharing" # The URL of Google Colab (https://colab.research.google.com)
