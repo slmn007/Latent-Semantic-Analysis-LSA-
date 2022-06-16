@@ -731,7 +731,9 @@ Akan tetapi pemrosesan ini tidak dibutuhkan pada kesempatan kali ini. Karena, pa
 [nltk_data]    |   Package treebank is already up-to-date!
 [nltk_data]    | Downloading package twitter_samples to
 [nltk_data]    |     C:\Users\uchih\AppData\Roaming\nltk_data...
-[nltk_data]    |   Package twitter_samples is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Package twitter_samples is already up-to-date!
 [nltk_data]    | Downloading package omw to
 [nltk_data]    |     C:\Users\uchih\AppData\Roaming\nltk_data...
 [nltk_data]    |   Package omw is already up-to-date!
@@ -745,7 +747,9 @@ Akan tetapi pemrosesan ini tidak dibutuhkan pada kesempatan kali ini. Karena, pa
 [nltk_data]    |   Package wordnet is already up-to-date!
 [nltk_data]    | Downloading package wordnet2021 to
 [nltk_data]    |     C:\Users\uchih\AppData\Roaming\nltk_data...
-[nltk_data]    |   Package wordnet2021 is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Package wordnet2021 is already up-to-date!
 [nltk_data]    | Downloading package wordnet31 to
 [nltk_data]    |     C:\Users\uchih\AppData\Roaming\nltk_data...
 [nltk_data]    |   Package wordnet31 is already up-to-date!
@@ -762,7 +766,9 @@ Akan tetapi pemrosesan ini tidak dibutuhkan pada kesempatan kali ini. Karena, pa
 [nltk_data]    |   Package maxent_ne_chunker is already up-to-date!
 [nltk_data]    | Downloading package punkt to
 [nltk_data]    |     C:\Users\uchih\AppData\Roaming\nltk_data...
-[nltk_data]    |   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]    |   Package punkt is already up-to-date!
 [nltk_data]    | Downloading package snowball_data to
 [nltk_data]    |     C:\Users\uchih\AppData\Roaming\nltk_data...
 [nltk_data]    |   Package snowball_data is already up-to-date!
@@ -916,9 +922,17 @@ W_{i, j}=\frac{n_{i, j}}{\sum_{j=1}^{p} n_{j, i}} \log _{2} \frac{D}{d_{j}}
 <p>Keterangan:</p>
 <p><span class="math notranslate nohighlight">\(
 {W_{i, j}}\quad\quad\&gt;: \text { pembobotan tf-idf untuk term ke-j pada dokumen ke-i } \\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {n_{i, j}}\quad\quad\&gt;\&gt;: \text { jumlah kemunculan term ke-j pada dokumen ke-i }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {p} \quad\quad\quad\&gt;\&gt;: \text { banyaknya term yang terbentuk }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {\sum_{j=1}^{p} n_{j, i}}: \text { jumlah kemunculan seluruh term pada dokumen ke-i }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {d_{j}} \quad\quad\quad: \text { banyaknya dokumen yang mengandung term ke-j }\\
 \)</span></p>
 <blockquote>
@@ -1458,8 +1472,14 @@ A_{m n}=U_{m m} x S_{m n} x V_{n n}^{T}
 <p>Keterangan:</p>
 <p><span class="math notranslate nohighlight">\(
 {A_{m n}}: \text { Matrix Awal } \\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {U_{m m}}: \text { Matrix ortogonal U }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {S_{m n}}\&gt;: \text { Matrix diagonal S }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {V_{n n}^{T}}\&gt;\&gt;: \text { Transpose matrix ortogonal V }\\
 \)</span></p>
 <p>Output dari SVD ini digunakan untuk menghitung similaritasnya dengan pendekatan cosine similarity.</p>
@@ -1472,11 +1492,23 @@ Untuk rumusnya sendiri seperti berikut.</p>
 <p>Keterangan:</p>
 <p><span class="math notranslate nohighlight">\(
 {A}\&gt; \quad\quad: \text { vektor dokumen } \\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {B}\&gt;\quad\quad: \text { vektor query }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {\boldsymbol{A} \cdot \boldsymbol{B}}\&gt;: \text { perkalian dot vektor }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {|\boldsymbol{A}|}\&gt;\quad: \text { panjang vektor A }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {|\boldsymbol{B}|}\&gt;\quad: \text { panjang vektor B }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 {|\boldsymbol{A}||\boldsymbol{B}|}: \text { Perkalian panjang vektor }\\
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 \alpha\&gt; \quad\quad: \text { sudut yang terbentuk antara vektor A dengan vektor B }\\
 \)</span></p>
 <blockquote>
@@ -1705,10 +1737,7 @@ Topic 18:
 balita gizi status karyawan kriteria kelas sms puskesmas jaringan jabatan daya arosbaya produksi berstatus lsa data supplier tekstur fanp promosi sub penjadwalan fahp informasi bobot klasifikasi optimal pencarian siakad class 
 
 Topic 19: 
-kec pemetaan lahan pertanian wajah kabupaten manusia nilai balita straw tanaman gizi cluster mobile status tingkat obat android penjiplakan dokumen karyawan epoch ha pos merah 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mendeteksi toefl geografis fuzzy berwarna 
+kec pemetaan lahan pertanian wajah kabupaten manusia nilai balita straw tanaman gizi cluster mobile status tingkat obat android penjiplakan dokumen karyawan epoch ha pos merah mendeteksi toefl geografis fuzzy berwarna 
 
 Topic 20: 
 supplier kalibrasi pemilihan vision proses tangan kamera fmop web perhitungan part spare teknik telapak tsai gizi balita siakad status pengukuran pembelian supply chain batasan objective diperoleh parameter obat pencarian sapi 
@@ -1720,15 +1749,16 @@ Topic 22:
 straw lahan pertanian tanaman kabupaten bangkalan ha senyum kalibrasi jaringan komputer pengukuran error web maps seluas penentuan kec sapi google pencarian jenis koneksi square kpi peternakan produktivitas mse vision administrator 
 
 Topic 23: 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kec karyawan part spare kalibrasi dokter penjualan pencarian penilaian perusahaan pemetaan vision web gejala berprestasi rata proses daya kamera mobile asesoris jabatan tes mamdani algoritma peramalan merah fanp promosi tingkat 
+kec karyawan part spare kalibrasi dokter penjualan pencarian penilaian perusahaan pemetaan vision web gejala berprestasi rata proses daya kamera mobile asesoris jabatan tes mamdani algoritma peramalan merah fanp promosi tingkat 
 
 Topic 24: 
 pos produk express persero yangxd indonesia senyum augmented aksara kalibrasi neural rbf inixd edm pola informasi function radial memperoleh gerak analisis pt web reality salah siakad ujicoba network vision pekerja 
 
 Topic 25: 
-part spare dokumen produksi senyum penjualan periode lahan pertanian gerak algoritma tanaman bangkalan kemiskinan pekerja epoh bahan supplier jaringan smarter rate learning menyebabkan menentukan balita mobile meramalkan penjiplakan baku jenis 
+part spare dokumen produksi senyum penjualan periode lahan pertanian gerak algoritma tanaman bangkalan kemiskinan pekerja epoh 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bahan supplier jaringan smarter rate learning menyebabkan menentukan balita mobile meramalkan penjiplakan baku jenis 
 
 Topic 26: 
 kalibrasi sms karyawan vision wajah pesan lahan pertanian obat manusia kamera gerak tanaman pekerja aplikasi kabupaten teknik histogram tsai proses straw aksara ha naive skenario finite state cipherteks fitur parameter 
@@ -1740,9 +1770,7 @@ Topic 28:
 kec wajah augmented reality senyum server ips penyusupan serangan snort kebutuhan ar keamanan obat iptables tindakan algoritma pengenalan rekayasa pendukung pemetaan pencarian sapi seiring flartoolkit library animasi mengembangkan analysis gizi 
 
 Topic 29: 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lahan pertanian part spare tanaman pos web ha bangkalan kabupaten maps seluas produk express penjualan telapak google dokter augmented pemilihan epoh persero wajah kesesuaian lokasi supplier yangxd menyebabkan jenis lsa 
+lahan pertanian part spare tanaman pos web ha bangkalan kabupaten maps seluas produk express penjualan telapak google dokter augmented pemilihan epoh persero wajah kesesuaian lokasi supplier yangxd menyebabkan jenis lsa 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\uchih\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
