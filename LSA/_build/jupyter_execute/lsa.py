@@ -228,9 +228,21 @@ df['stop_kata']
 # 
 # $
 # {W_{i, j}}\quad\quad\>: \text { pembobotan tf-idf untuk term ke-j pada dokumen ke-i } \\
+# $
+# 
+# $
 # {n_{i, j}}\quad\quad\>\>: \text { jumlah kemunculan term ke-j pada dokumen ke-i }\\
+# $
+# 
+# $
 # {p} \quad\quad\quad\>\>: \text { banyaknya term yang terbentuk }\\
+# $
+# 
+# $
 # {\sum_{j=1}^{p} n_{j, i}}: \text { jumlah kemunculan seluruh term pada dokumen ke-i }\\
+# $
+# 
+# $
 # {d_{j}} \quad\quad\quad: \text { banyaknya dokumen yang mengandung term ke-j }\\
 # $
 
@@ -293,17 +305,11 @@ print(vect_abstrak)
 print(vect_abstrak.shape)
 
 
-# In[20]:
-
-
-print(vect_abstrak*vect_abstrak.T)
-
-
 # Diatas ini merupakan daftar TF-IDF didalam setiap dokumen.
 
 # >Menampilkan data hasil pemrosesan TD-IDF kedalam bentuk DataFrame agar lebih mudah dibaca
 
-# In[21]:
+# In[20]:
 
 
 term=vectorizer.get_feature_names_out()
@@ -312,14 +318,14 @@ term
 
 # variabel "term" berisi daftar list kata didalam corpus
 
-# In[22]:
+# In[21]:
 
 
 df_Tf_Idf =pd.DataFrame(data=vect_abstrak.toarray(), columns=[term])
 df_Tf_Idf.head()
 
 
-# In[23]:
+# In[22]:
 
 
 df_Tf_Idf.shape
@@ -344,8 +350,17 @@ df_Tf_Idf.shape
 # 
 # $
 # {A_{m n}}: \text { Matrix Awal } \\
+# $
+# 
+# $
 # {U_{m m}}: \text { Matrix ortogonal U }\\
+# $
+# 
+# $
 # {S_{m n}}\>: \text { Matrix diagonal S }\\
+# $
+# 
+# $
 # {V_{n n}^{T}}\>\>: \text { Transpose matrix ortogonal V }\\
 # $
 
@@ -362,18 +377,36 @@ df_Tf_Idf.shape
 # 
 # $
 # {A}\> \quad\quad: \text { vektor dokumen } \\
+# $
+# 
+# $
 # {B}\>\quad\quad: \text { vektor query }\\
+# $
+# 
+# $
 # {\boldsymbol{A} \cdot \boldsymbol{B}}\>: \text { perkalian dot vektor }\\
+# $
+# 
+# $
 # {|\boldsymbol{A}|}\>\quad: \text { panjang vektor A }\\
+# $
+# 
+# $
 # {|\boldsymbol{B}|}\>\quad: \text { panjang vektor B }\\
+# $
+# 
+# $
 # {|\boldsymbol{A}||\boldsymbol{B}|}: \text { Perkalian panjang vektor }\\
+# $
+# 
+# $
 # \alpha\> \quad\quad: \text { sudut yang terbentuk antara vektor A dengan vektor B }\\
 # $
 # 
 
 # >import library
 
-# In[24]:
+# In[23]:
 
 
 from sklearn.decomposition import TruncatedSVD
@@ -381,7 +414,7 @@ from sklearn.decomposition import TruncatedSVD
 
 # >Pemrosesan LSA
 
-# In[25]:
+# In[24]:
 
 
 lsa_model = TruncatedSVD(n_components=30, algorithm='randomized', n_iter=10, random_state=42)
@@ -392,7 +425,7 @@ lsa_top=lsa_model.fit_transform(vect_abstrak)
 
 # >Matrix U
 
-# In[26]:
+# In[25]:
 
 
 print(lsa_top)
@@ -401,7 +434,7 @@ print(lsa_top.shape)  # (proporsi topik pada setiap dokumen)
 
 # >Proporsi topik pada dokumen 0
 
-# In[27]:
+# In[26]:
 
 
 l=lsa_top[0]
@@ -412,7 +445,7 @@ for i,topic in enumerate(l):
 
 # >Matrix V
 
-# In[28]:
+# In[27]:
 
 
 print(lsa_model.components_.shape) # (proporsi topik terhadap term)
@@ -421,7 +454,7 @@ print(lsa_model.components_)
 
 # >S
 
-# In[29]:
+# In[28]:
 
 
 print(lsa_model.singular_values_) 
@@ -430,7 +463,7 @@ print(lsa_model.singular_values_.shape)
 
 # >Hasil ranking dari setiap topik dalam dokumen seperti dibawah
 
-# In[30]:
+# In[29]:
 
 
 # most important words for each topic
@@ -445,13 +478,13 @@ for i, comp in enumerate(lsa_model.components_):
     print("\n")
 
 
-# In[31]:
+# In[30]:
 
 
 from wordcloud import WordCloud
 
 
-# In[32]:
+# In[31]:
 
 
 def draw_word_cloud(index):
@@ -470,7 +503,7 @@ def draw_word_cloud(index):
     plt.show()
 
 
-# In[33]:
+# In[32]:
 
 
 draw_word_cloud(0)
